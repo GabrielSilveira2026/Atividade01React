@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './styles.css';
+
+const App = () => {
+  const estiloDIV1 = {
+    margin: 'auto',
+    padding: 10,
+    width: 'auto', 
+    backgroundColor: 'rgba(239,239,239,255)',
+    border: '1px solid',
+    borderRadius: 3,
+    borderColor: 'rgba(150,150,150,255)',
+    textAlign: 'center',
+    fontSize: '12px',
+    fontWeight: 'bold',
+  }
+
+  return (
+    <div style={estiloDIV1}>
+      <label>Profissionais da saúde</label> 
+      <div style={{marginTop:'5px', padding:'1px', border:'1px solid', borderRadius:'3px'}}>
+        <div id="cartoes">aa</div>
+        <div id="cartoes">aa</div>
+        <div id="cartoes">aa</div>
+      </div>
+    </div>
+  )
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <App/>,
+  document.querySelector('#root')
+)
